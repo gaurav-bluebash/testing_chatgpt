@@ -12,8 +12,7 @@ class ChatgptController < ApplicationController
     file = Tempfile.new([[*'a'..'z',*'A'..'Z'].shuffle[0..6].join,'.html'])
     file.write(response)
     file.rewind
-    # system("google-chrome #{file.path}")
-    debugger
+    # system("google-chrome #{file.path}") #For open the file in new chrome tab
     render json: {content: response, file: file.path}
 	end
 
