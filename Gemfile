@@ -45,7 +45,6 @@ gem "bootsnap", require: false
 gem "ruby-openai"
 
 gem 'pg'
-gem 'omniauth-google-oauth2'
 gem 'rack-cors'
 
 # Use Sass to process CSS
