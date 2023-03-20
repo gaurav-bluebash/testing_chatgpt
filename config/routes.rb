@@ -3,8 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get '/generate', to: 'chatgpt#generate'
-  get '/search', to: 'chatgpt#suggest'
-  get '/auth/:provider/callback', to: 'sessions#create'
+  post '/generate', to: 'chatgpt#generate'
+  post '/search', to: 'chatgpt#suggest'
 
 end
