@@ -25,9 +25,16 @@ development:
 #   <<: *default
 #   database: db/test.sqlite3
 
+# production:
+#   <<: *default
+#   url: <%= ENV["DATABASE_URL"] %>
+#   database: render_deploy_production
+#   username: render_deploy
+#   password: <%= ENV["RENDER_DEPLOY_DATABASE_PASSWORD"] %>
+
 production:
   <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
-  database: render_deploy_production
-  username: render_deploy
-  password: <%= ENV["RENDER_DEPLOY_DATABASE_PASSWORD"] %>
+  database: mysite_production
+  username: mysite
+  password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
