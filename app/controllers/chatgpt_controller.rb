@@ -2,7 +2,7 @@ class ChatgptController < ApplicationController
   skip_before_action :verify_authenticity_token
 
 	def generate
-    client = OpenAI::Client.new(access_token: "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")
+    client = OpenAI::Client.new(access_token: "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")
     response = client.chat(
     parameters: {
         model: "gpt-3.5-turbo",
